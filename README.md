@@ -1,14 +1,17 @@
-# fix_broadcom_wireless_ubuntu #
+# Fix Broadcom Wireless Ubuntu
 
-This fix is based on [this](http://askubuntu.com/a/553619) askubuntu answer.
+Based on [this](http://askubuntu.com/a/553619) askubuntu answer.
 
-After a fresh install you need to re-insert your install CD / USB and place the following files
-on your desktop:
+After a fresh install you need to re-insert your install CD / USB and copy the following into the current directory:
 
 * pool > restricted > b > bcmwl > bcmwl-kernel-source*.deb
 * pool > main > d > dkms > dkms*.deb
 
-then run (although most likely type as you have no internet connection) the apply_fix.bash
-script provided in this repo.
+Now you can run:
 
-done.
+```bash
+dpkg -i dkms*.deb;
+dpkg -i bcmwl*.deb;
+```
+
+Enjoy your internet :)
